@@ -1,0 +1,1 @@
+#define SYS_CALL_TABLE 0xc0592150
