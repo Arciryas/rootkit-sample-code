@@ -1,4 +1,4 @@
-obj-m   := lkm2.o
+obj-m   := lkm3.o
 KDIR    := /lib/modules/$(shell uname -r)/build
 PWD	:= $(shell pwd)
 
